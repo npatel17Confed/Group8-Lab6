@@ -1,5 +1,6 @@
 body {
 	background-color: #fefefe;
+	margin: 0;
 }
 
 /* Navbar */
@@ -8,49 +9,74 @@ header {
 	top: 0;
 	left: 0;
 	background-color: black;
-	width: 100%;
+	width: 100vw;
+	padding-top: 20px;	
+}
+
+.heading{
+	display: inline;
+	color: white;
+	padding: 20px;
+    font-size: 1.1rem;
+    text-decoration: none;
+}
+
+.heading:hover {
+	cursor: pointer;
+}
+
+nav button{
+	display: block;
+	padding: 1vw;
+    font-size: 3vh;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    align-self: flex-start;
+
+}
+
+nav a{
+	color: white;
+	display: block;
 }
 
 nav {
-	width: 80%;
-	margin: auto;
-	padding: 10px 0px;
+	visibility: hidden;
+	width: 100vw;
+	height: 0;
+	margin: 0;
+	padding: 20px 0px;
 	vertical-align: baseline;
-	display: flex;
+	text-decoration: none;
+	list-style-type: none;
+	padding: 10px 0;
+	transition: visibility 0.5s linear, height 0.5s linear;
 }
 
-nav .right {
-	width: 100%;
-}
-
-nav .right ul {
+nav li {
+	padding: 10px 0 10px 75px;
 	list-style: none;
-	justify-content: flex-end;
+}
+
+nav li a {
+	text-decoration: none;
+}
+
+nav ul {
+	flex-direction: column;
+	margin: 0;
+	padding: 0;
 	display: flex;
 }
 
-nav .left {
-	color: white;
-	text-decoration: none;
+nav li{
+	margin:0;
 }
 
-nav .left a {
-	font-size: 20px;
-	font-weight: bold;
-	font-style: italic;
-}
 
-nav a {
-	padding:10px 20px;
-	text-decoration: none;
-	color: white;
-	background-color: black;
-}
-
-nav a:hover {
-	background-color: white;
-	color: black;
-}
 
 /* Container */
 .container {
