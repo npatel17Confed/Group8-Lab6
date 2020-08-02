@@ -16,22 +16,20 @@ nav {
 	margin: auto;
 	padding: 10px 0px;
 	vertical-align: baseline;
+	display: flex;
+}
+
+nav .right {
+	width: 100%;
 }
 
 nav .right ul {
 	list-style: none;
-}
-
-nav .right {
-	float: right;
-}
-
-nav .right ul li {
-	display: inline;
+	justify-content: flex-end;
+	display: flex;
 }
 
 nav .left {
-	float: left;
 	color: white;
 	text-decoration: none;
 }
@@ -54,12 +52,20 @@ nav a:hover {
 	color: black;
 }
 
-
 /* Container */
 .container {
 	padding: 5% 0;
 	width: 80%;
 	margin: auto;
+}
+
+#container-flex {
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.container .content {
+	width: 100%;
 }
 
 .container .project img {
@@ -68,19 +74,14 @@ nav a:hover {
 }
 
 .container .project {
-	clear: both;
+	display: flex;
+	justify-content: flex-start;
 	padding: 40px 0;
 }
 
 .container .project a {
-	float: left;
 	margin-right: 20px;
 	border: 1px solid black;
-}
-
-.container .content {
-	float: right;
-	width: 60%;
 }
 
 .container pre {
@@ -107,13 +108,13 @@ nav a:hover {
 }
 
 .container .info {
-	clear: both;
+	display: flex;
+	justify-content: flex-start;
 }
 
 .container .contact img {
 	height: 110px;
 	width: 110px;
-	float: left;
 	padding: 0 20px 20px 0;
 }
 
